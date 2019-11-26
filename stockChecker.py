@@ -7,6 +7,7 @@ import os
 
 
 def checkStock(URL, model):
+    #even with this still the issue of timing out,
     REQUESTS_MAX_RETRIES = int(os.getenv("REQUESTS_MAX_RETRIES", 4))
 
     headers= {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
