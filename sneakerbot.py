@@ -1,4 +1,5 @@
 #https://www.adidas.co.nz/stan-smith-shoes/EE5818.html?forceSelSize=EE5818_630
+from stockChecker import checkStock
 def UrlGenerator(model, size):
     BaseSize = 530 #This is saying the shoesize is 6.5
     ShoeSize = size - 4
@@ -7,8 +8,12 @@ def UrlGenerator(model, size):
     ShoeSizeCode = int(Rawsize)
     URL = 'https://www.adidas.co.nz/' + str(model) + '.html?forceSelSize=' + str(model) + '_' + str(ShoeSizeCode)
     return URL
-Model = raw_input('Model #')
-Size = input('Size: ')
+# Model = raw_input('Model #')
+# Size = input('Size: ')
 
-URL = UrlGenerator(Model, Size)
+#URL = UrlGenerator(model, Size)
 print(str(URL))
+
+def run(modl, size):
+    URL = UrlGenerator(model, Size)
+    checkStock(URL, model)
