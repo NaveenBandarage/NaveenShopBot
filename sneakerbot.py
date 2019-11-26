@@ -1,5 +1,7 @@
 #https://www.adidas.co.nz/stan-smith-shoes/EE5818.html?forceSelSize=EE5818_630
 from stockChecker import checkStock
+
+
 def UrlGenerator(model, size):
     BaseSize = 530 #This is saying the shoesize is 6.5
     ShoeSize = size - 4
@@ -12,8 +14,9 @@ def UrlGenerator(model, size):
 # Size = input('Size: ')
 
 #URL = UrlGenerator(model, Size)
-print(str(URL))
+#print(str(URL))
 
-def run(modl, size):
-    URL = UrlGenerator(model, Size)
+def Main(model, size):
+
+    URL = UrlGenerator(model, size)
     checkStock(URL, model)
